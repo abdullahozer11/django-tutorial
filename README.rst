@@ -96,4 +96,18 @@ Key learnings:
 - <model_class_name>.<field>.<method>(<args>) is the general API syntax.
 - One can interact with the models vis the Django Admin app.
 
+Part 3
+------
 
+Key learnings:
+
+- Views are methods that take a request as argument, and other parameters and
+  return an HttpResponse object.
+- URLs use patterns to general URL paths and to pass arguments views they are
+  mapped to.
+- Useful shortcuts in views are: `django.shortcuts.render` and
+  `django.shortcuts.get_object_or_404`.
+- Templates are called in view and passed arguments in a context.
+- To avoid hardcoded URLs in templates, use the:  url '<path_name>' <argument>
+- To avoid collisions of URLs, use the namespace syntax:
+  url '<namespace_name><path_name>' <argument>
