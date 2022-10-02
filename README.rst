@@ -110,4 +110,4 @@ Key learnings:
 - Templates are called in view and passed arguments in a context.
 - To avoid hardcoded URLs in templates, use the:  url '<path_name>' <argument>
 - To avoid collisions of URLs, use the namespace syntax:
-  url '<namespace_name><path_name>' <argument>
+  url '<namespace_name><path_name>' <argument>.
