@@ -111,3 +111,32 @@ Key learnings:
 - To avoid hardcoded URLs in templates, use the:  url '<path_name>' <argument>
 - To avoid collisions of URLs, use the namespace syntax:
   url '<namespace_name><path_name>' <argument>.
+
+Part 4
+------
+
+Key learnings:
+
+- All POST forms that are targeted at internal URLs should use the
+  `{% csrf_token %}` template tag to prevent from cross site request forgeries.
+- request.POST is a dictionary-like object that lets you access submitted data.
+  of a form by key name. (request.GET also exists).
+-  `django.http.HttpResponseRedirect` can be the object returned by a view to
+  redirect to a specific URL.
+- The `django.urls.reverse` allows to not have to pass hardcoded URLs.
+- If two POST requests are executed simultaneously on two different threads,
+  using F(), can avoid race conditions:
+  `See more <https://docs.djangoproject.com/en/4.1/ref/models/expressions/#avoiding-race-conditions-using-f>`_
+- Generic views/class abstract common patterns of views to write less code.
+- Generic views are built-in class-based views.
+- They match the `pk` (primary key) argument of a model.
+- They come from `django.views.generic`.
+- `ListView`
+    - abstracts the concept of "display a lit of objects".
+    - uses a template called <app_name>/<model_name>_list.html.
+    - has the automatically generated context variable <model_name>_list.
+    - `context_object_name` variable can override <model_name>_list.
+- `DetailView`
+    - abstracts the concept of "display a detail page for a particular type of
+      object".
+    - uses a template called <app_name>/<model_name>_detail.html.

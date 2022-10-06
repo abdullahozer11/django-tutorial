@@ -1,4 +1,8 @@
 {
+  "emmet.includeLanguages": {
+      "django-html": "html",
+      "jinja-html": "html"
+  },
   "cSpell.words": [
     "makemigrations",
     "sqlmigrate",
