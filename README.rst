@@ -140,3 +140,34 @@ Key learnings:
     - abstracts the concept of "display a detail page for a particular type of
       object".
     - uses a template called <app_name>/<model_name>_detail.html.
+
+Part 5
+------
+
+Key commands:
+
+- Run tests for an application:
+
+.. code-block:: bash
+
+    python manage.py test <app_name>
+
+Key learnings:
+
+- When running the tests, Django creates a specific database for the purpose of
+  testing.
+- Django test client can be set up using
+  `django.test.utils.setup_test_environment` in the shell.
+- It doesn't set up a test database, it is tested against existing data.
+- We can use: `django.test.Client` to create a client instance and interact
+  with the views.
+- Inheriting from `django.test.TestCase` for creating our test class allows to
+  get a `django.test.Client` on the fly.
+- `assertContains` and `assertQuerySetEquals` are two examples of methods
+  inherited from `django.test.TestCase` to perform assertions.
+- At each method of the a test class, the database is reset.
+- It is good practice to have
+    - a separate TestClass for each model or view.
+    - a separate test for each set of conditions you want to test.
+- Django includes `django.test.LiveServerTestCase` to facilitate integration of
+  UI testing with Django.
