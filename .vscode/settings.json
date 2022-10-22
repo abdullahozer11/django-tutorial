@@ -7,9 +7,13 @@
     "inlines",
     "makemigrations",
     "mysite",
+    "pyproject",
+    "sdist",
+    "setuptools",
     "sqlmigrate",
     "startapp",
     "startproject",
-    "staticfiles"
+    "staticfiles",
+    "urlpatterns"
   ]
 }

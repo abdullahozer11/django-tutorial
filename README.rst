@@ -221,3 +221,44 @@ Key learnings:
   reference in the `settings.py` file under `TEMPLATES.DIRS`.
 - In the `settings.py` file, `TEMPLATES.APP_DIRS` being set to `True`, Django
   will look for template files into each imported app.
+
+Advanced tutorial: How to write reusable apps
+---------------------------------------------
+
+Key commands:
+
+- To create the package:
+
+.. code-block:: bash
+
+  python setup.py sdist
+
+- To install the created package:
+
+.. code-block:: bash
+
+  python -m pip install --user django-polls/dist/django-polls-0.1.tar.gz
+
+- To uninstall the created package:
+
+.. code-block:: bash
+
+  python -m pip uninstall django-polls
+
+Key learnings:
+
+- To create a packaged app:
+  - Create a parent directory.
+  - Move the app inside this directory.
+  - Add a `README.rst` file.
+  - Use a license which is needed for public release. BSD license is common
+    among Django-compatible applications. It affects who is able to use your
+    code.
+  - Create `pyproject.toml`, `setup.cfg` and `setup.py` files. These files
+    detail how to build and install the application.
+  - Only Python modules and packages are included in package by default. To
+    include additional files, we need to create a MANIFEST.in file where we
+    mention: `README.rst`, `LICENSE`...
+  - Additionally, add detailed documentation with your application inside a
+    folder `docs`. This needs to be added to the `MANIFEST.in` file. Use
+    `ReadTheDocs <https://readthedocs.org/>`_ to publish your documentation.
