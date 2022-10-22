@@ -4,7 +4,9 @@
     "jinja-html": "html"
   },
   "cSpell.words": [
+    "inlines",
     "makemigrations",
+    "mysite",
     "sqlmigrate",
     "startapp",
     "startproject",
