@@ -175,6 +175,8 @@ Key learnings:
 Part 6
 ------
 
+Key learnings:
+
 - `django.contrib.staticfiles` is an application that helps collection static
   files from each of our applications into a single location that can easily be
   served in production.
